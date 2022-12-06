@@ -9,11 +9,11 @@ using namespace std;
 void NumIsTrue (const char Word[])
 { 
     int k = 0;
-    for (int n = 0; n <= strlen(Word); n++)
+    for (int i = 0; i <= strlen(Word); i++)
     {
-        for (int mm = 48; mm <= 57; mm++)
+        for (int j = 48; j <= 57; j++)
         {
-            if (Word[n] == ((char)mm))
+            if (Word[i] == ((char)j))
             {
                 k++;
             }
@@ -28,11 +28,6 @@ int main()
     cout << " I will find the words with only 1 number\n";
     cout << " You have 20 symbols for ENGLISH Word \n";
     cout << "\nEnter 1st Word\t";
-    //Можна використовувати 
-    // setlocale(LC_ALL, "ukr"); 
-    // або SetConsoleCP(1251);
-    //SetConsoleOutputCP(1251);
-    //Але для спрощення усе англійскою
     char firstWord[20];
     cin >> firstWord;
     NumIsTrue(firstWord);
@@ -44,12 +39,4 @@ int main()
     char thirdWord[20];
     cin >> thirdWord;;
     NumIsTrue(thirdWord);
-    cout << "\nEnter 4 Word\t";
-    char fourWord[20];
-    cin >> fourWord;
-    NumIsTrue(fourWord);
-    cout << "\nEnter 5 Word \t";
-    char fiveWord[20];
-    cin >> fiveWord;
-    NumIsTrue(fiveWord);
 }
